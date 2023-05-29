@@ -14,18 +14,17 @@ async function getBooks() {
 }
 
 function showBooks(booksTable) {
-  booksTable.forEach((livro) => {
+  booksTable.forEach((book) => {
     insertBooksByID.innerHTML += `
         <div class="livro">
-      <img class="livro__imagens" src="imagens/Cangaceiro-Javascript.png" alt="Capa do livro Cangaceiro JavaScript" />
+      <img class="livro__imagens" src="${book.imagem}" alt="${book.alt}" />
       <h2 class="livro__titulo">
-        Cangaceiro JavaScript:
-        Uma aventura no sertão da programação
+        ${book.titulo}
       </h2>
-      <p class="livro__descricao">Flávio Almeida</p>
-      <p class="livro__preco" id="preco">R$29,90</p>
+      <p class="livro__descricao">${book.autor}</p>
+      <p class="livro__preco" id="preco">R$ ${book.preco}</p>
       <div class="tags">
-        <span class="tag">Front-end</span>
+        <span class="tag">${book.categoria}</span>
       </div>
     </div>
     `;
