@@ -1,6 +1,7 @@
 const insertBooksByID = document.getElementById("livros");
 
 function showBooks(booksTable) {
+  insertBooksByID.innerHTML = "";
   booksTable.forEach((book) => {
     insertBooksByID.innerHTML += `
         <div class="livro">
