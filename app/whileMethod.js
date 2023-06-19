@@ -1,1 +1,1 @@
-console.log("New JS Script");
+// console.log("New JS Script");
