@@ -1,9 +1,9 @@
-const insertBooksByID = document.getElementById("livros");
+const insertBksByID = document.getElementById("livros");
 
 function showBooks(booksTable) {
-  insertBooksByID.innerHTML = "";
+  insertBksByID.innerHTML = "";
   booksTable.forEach((book) => {
-    insertBooksByID.innerHTML += `
+    insertBksByID.innerHTML += `
         <div class="livro">
       <img class="livro__imagens" src="${book.imagem}" alt="${book.alt}" />
       <h2 class="livro__titulo">
